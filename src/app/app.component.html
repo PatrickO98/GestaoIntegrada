@@ -1,14 +1,22 @@
 <header>
   <nav>
     <h1>polygon</h1>
-
     <ul>
-      <li><a href="">Cadastro de Colaboradores</a></li>
-      <li><a href="">Folhas de Pagamento</a></li>
-      <li><a href="">Registros de Ponto</a></li>
+      <li>
+        <a routerLink="/colaboradores">Cadastro de Colaboradores</a>
+      </li>
+      <li>
+        <a href="">Folhas de Pagamento</a>
+      </li>
+      <li>
+        <a href="">Registros de Ponto</a>
+      </li>
     </ul>
   </nav>
 </header>
 
-<app-colaboradores></app-colaboradores>
+<router-outlet></router-outlet>
 
+<footer>
+  <p>&copy; 2018 - Todos os direitos reservados.</p>
+</footer>

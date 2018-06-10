@@ -10,7 +10,7 @@
     <div class="user colaboradores" *ngFor="let colaborador of colaboradores">
       <h2><i class="fa fa-user"></i> {{ colaborador.name }}</h2>
       <h3><b>Cargo:</b> {{ colaborador.cargo }}</h3>
-      <a href="#" class="btn-mais">Ver/Editar</a>
+      <a class="btn-mais" (click)="onSelect(colaborador)" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
     </div>
   </div>
 </div>

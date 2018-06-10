@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Colaborador } from '../colaborador';
 import { COLABORADORES } from '../colaboradores';
+import { ColaboradorService } from '../colaborador.service';
 
 @Component({
   selector: 'app-colaboradores',
@@ -9,18 +10,23 @@ import { COLABORADORES } from '../colaboradores';
 })
 export class ColaboradoresComponent implements OnInit {
 
-  colaboradores = COLABORADORES;
+  colaboradores: Colaborador[];
 
-  colaborador: Colaborador = {
-    id: 1,
-    name: "Patrick Oliveira",
-    cargo: "Coordenador de TI"
-  };
+  constructor(private colaboradorService: ColaboradorService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  getColaboradores(): void {
+    this.colaboradorService.getColaboradores()
+      .subscribe(colaboradores => this.colaboradores = colaboradores);
   }
 
+  ngOnInit() {
+    this.getColaboradores();
+  }
+
+  selectedColaborador: Colaborador;
+
+  onSelect(colaborador: Colaborador): void {
+    this.selectedColaborador = colaborador;
+  }
 
 }

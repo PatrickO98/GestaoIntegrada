@@ -2,3 +2,86 @@
 body {
     margin: 0;
 }
+
+/*
+$cor1: #ff3b3f;
+$cor2: #caebf2;
+$cor3: #a9a9a9;
+$cor4: #efefef;
+$font: 'Chau Philomene One', sans-serif;
+*/
+
+* {
+    font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+header nav {
+    background-color: #FF3B3F;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+header nav h1 {
+    font-family: 'Chau Philomene One', sans-serif;
+    color: #caebf2;
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav ul {
+    width: 90%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+}
+
+header nav ul li {
+    margin-right: 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .5s;
+}
+
+header nav ul li a:hover {
+    color: #caebf2;
+}
+
+.btn-mais {
+    padding: 12px;
+    text-align: center;
+    background-color: #FF3B3F;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+}
+
+footer {
+    width: 97.6%;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 15px 0 #e3e3e3;
+    text-align: center;
+}
