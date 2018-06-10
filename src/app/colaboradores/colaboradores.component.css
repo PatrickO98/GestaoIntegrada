@@ -1,0 +1,60 @@
+.container {
+    padding: 0 2rem;
+}
+
+.buscar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.buscar input.search {
+    display: block;
+    border: none;
+    padding: .5rem;
+    box-shadow: 2px 5px 10px 0 #e3e3e3;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .5s;
+}
+
+.buscar input.search:focus {
+    outline: none;
+    font-size: 1rem;
+}
+
+.buscar label {
+    position: absolute;
+    right: 15%;
+    margin-top: 7px;
+}
+
+.list-users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user {
+    width: 20%;
+    padding: 1rem;
+    box-shadow: 0 0 14px 0 #808080;
+    margin-bottom: 1rem;
+}
+
+.user h3 {
+    font-weight: normal;
+    height: 40px;
+}
+
+.user .btn-mais {
+    padding: 12px;
+    text-align: center;
+    background-color: #FF3B3F;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}

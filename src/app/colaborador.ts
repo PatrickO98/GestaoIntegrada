@@ -1,0 +1,5 @@
+export class Colaborador {
+    id: number;
+    name: string;
+    cargo: string;
+}

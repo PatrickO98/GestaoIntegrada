@@ -1,3 +1,16 @@
-<p>
-  colaboradores works!
-</p>
+<div class="container">
+  <div class="buscar">
+    <label for="busca">
+      <i class="fa fa-search"></i>
+    </label>
+    <input type="text" class="search" placeholder="Buscar colaborador" name="busca">
+  </div>
+
+  <div class="list-users">
+    <div class="user colaboradores" *ngFor="let colaborador of colaboradores">
+      <h2><i class="fa fa-user"></i> {{ colaborador.name }}</h2>
+      <h3><b>Cargo:</b> {{ colaborador.cargo }}</h3>
+      <a href="#" class="btn-mais">Ver/Editar</a>
+    </div>
+  </div>
+</div>
