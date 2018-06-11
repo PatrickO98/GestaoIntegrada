@@ -1,16 +1,22 @@
 <div class="container">
-  <div class="buscar">
-    <label for="busca">
-      <i class="fa fa-search"></i>
-    </label>
-    <input type="text" class="search" placeholder="Buscar colaborador" name="busca">
+
+  <div class="top">
+    <div class="buscar">
+      <label for="busca">
+        <i class="fa fa-search"></i>
+      </label>
+      <input type="text" class="search" placeholder="Buscar colaborador" name="busca">
+    </div>
+    <a class="btn-mais" href="/cadastro">Cadastrar Colaborador <i class="fa fa-plus"></i></a>
   </div>
 
   <div class="list-users">
     <div class="user colaboradores" *ngFor="let colaborador of colaboradores">
-      <h2><i class="fa fa-user"></i> {{ colaborador.name }}</h2>
-      <h3><b>Cargo:</b> {{ colaborador.cargo }}</h3>
-      <a class="btn-mais" (click)="onSelect(colaborador)" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
+      <h2>
+        <i class="fa fa-user"></i> {{ colaborador.name }}</h2>
+      <h3>
+        <b>Cargo:</b> {{ colaborador.cargo }}</h3>
+      <a class="btn-mais" (click)="onSelect(colaborador)" routerLink="detalhes/{{colaborador.id}}">Ver/Editar</a>
     </div>
   </div>
 </div>

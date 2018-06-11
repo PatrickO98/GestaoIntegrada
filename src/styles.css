@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     margin: 0;
+    background-color: #efefef;
 }
 
 /*
@@ -28,7 +29,8 @@ header nav {
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    box-shadow: 0 5px 10px 0 #e3e3e3;
 }
 
 header nav h1 {
@@ -49,6 +51,7 @@ header nav ul {
 
 header nav ul li {
     margin-right: 1.5rem;
+    overflow: hidden;
 }
 
 header nav ul li a {
@@ -59,8 +62,22 @@ header nav ul li a {
     transition: .5s;
 }
 
+header nav ul li a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #caebf2;
+    margin-left: -100%;
+    transition: 1s;
+}
+
 header nav ul li a:hover {
     color: #caebf2;
+}
+
+header nav ul li a:hover:after {
+    margin-left: 0;
 }
 
 .btn-mais {
@@ -74,9 +91,17 @@ header nav ul li a:hover {
     font-weight: bold;
     display: block;
     cursor: pointer;
+    transition: .5s;
+}
+
+.btn-mais:hover {
+    background-color: #a9a9a9;
+    color: #FF3B3F;
+    box-shadow: 0 0 10px 0 #e3e3e3;
 }
 
 footer {
+    background-color: #fff;
     width: 97.6%;
     padding: 1rem;
     position: absolute;

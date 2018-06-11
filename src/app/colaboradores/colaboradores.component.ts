@@ -23,10 +23,4 @@ export class ColaboradoresComponent implements OnInit {
     this.getColaboradores();
   }
 
-  selectedColaborador: Colaborador;
-
-  onSelect(colaborador: Colaborador): void {
-    this.selectedColaborador = colaborador;
-  }
-
 }

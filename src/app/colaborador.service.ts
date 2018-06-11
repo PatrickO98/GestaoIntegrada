@@ -13,4 +13,8 @@ export class ColaboradorService {
   getColaboradores(): Observable<Colaborador[]> {
     return of(COLABORADORES);
   }
+
+  getColaborador(id: number): Observable<Colaborador> {
+    return of(COLABORADORES.find(colaborador => colaborador.id === id));
+  }
 }

@@ -1,6 +1,11 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
 .buscar {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    width: 75%;
 }
 
 .buscar input.search {
@@ -8,20 +13,21 @@
     border: none;
     padding: .5rem;
     box-shadow: 2px 5px 10px 0 #e3e3e3;
-    width: 75%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1rem;
     transition: .5s;
 }
 
 .buscar input.search:focus {
     outline: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .buscar label {
     position: absolute;
-    right: 15%;
+    right: 26%;
     margin-top: 7px;
 }
 
@@ -33,6 +39,7 @@
 }
 
 .user {
+    background-color: #fff;
     width: 20%;
     padding: 1rem;
     box-shadow: 0 0 14px 0 #808080;
