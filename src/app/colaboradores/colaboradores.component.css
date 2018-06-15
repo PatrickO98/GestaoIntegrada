@@ -35,7 +35,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .user {
@@ -43,7 +42,7 @@
     width: 20%;
     padding: 1rem;
     box-shadow: 0 0 14px 0 #808080;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .user h3 {

@@ -5,9 +5,9 @@
       <label for="busca">
         <i class="fa fa-search"></i>
       </label>
-      <input type="text" class="search" placeholder="Buscar colaborador" name="busca">
+      <input type="text" class="search" placeholder="Buscar colaborador" name="busca" (keyup)="filtraFuncionarios($event, searchFuncionario.value)" #searchFuncionario>
     </div>
-    <a class="btn-mais" href="/cadastro">Cadastrar Colaborador <i class="fa fa-plus"></i></a>
+    <a class="btn-mais" routerLink="/cadastro">Cadastrar Colaborador <i class="fa fa-plus"></i></a>
   </div>
 
   <div class="list-users">
@@ -16,7 +16,7 @@
         <i class="fa fa-user"></i> {{ colaborador.name }}</h2>
       <h3>
         <b>Cargo:</b> {{ colaborador.cargo }}</h3>
-      <a class="btn-mais" (click)="onSelect(colaborador)" routerLink="detalhes/{{colaborador.id}}">Ver/Editar</a>
+      <a class="btn-mais" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
     </div>
   </div>
 </div>

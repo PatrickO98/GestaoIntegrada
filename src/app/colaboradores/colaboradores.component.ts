@@ -10,17 +10,25 @@ import { ColaboradorService } from '../colaborador.service';
 })
 export class ColaboradoresComponent implements OnInit {
 
+  todosColaboradores: Colaborador[];
   colaboradores: Colaborador[];
 
   constructor(private colaboradorService: ColaboradorService) { }
 
   getColaboradores(): void {
     this.colaboradorService.getColaboradores()
-      .subscribe(colaboradores => this.colaboradores = colaboradores);
+      .subscribe(colaboradores => {
+        this.colaboradores = colaboradores;
+        this.todosColaboradores = colaboradores;
+      });
   }
 
   ngOnInit() {
     this.getColaboradores();
+  }
+
+  filtraFuncionarios(event: KeyboardEvent, param: string): void {
+    this.colaboradores = this.todosColaboradores.filter(e => e.name.includes(param));
   }
 
 }

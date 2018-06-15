@@ -1,0 +1,48 @@
+form {
+    width: 100%;
+}
+
+form input, select {
+    width: 100%;
+    display: block;
+    border: none;
+    padding: .5rem;
+    box-shadow: 2px 5px 10px 0 #e3e3e3;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    transition: .5s;
+}
+
+form input:focus, select:focus {
+    outline: none;
+    font-size: 1.2rem;
+}
+
+form .half {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+form .half input {
+    width: 48%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+form input[type="submit"] {
+    width: 15%;
+    margin-left: 0;
+    background-color: #00ffaa; 
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #caebf2;
+}
