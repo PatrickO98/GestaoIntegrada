@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ColaboradoresComponent } from './colaboradores/colaboradores.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ColaboradorDetalhesComponent } from './colaborador-detalhes/colaborador-detalhes.component';
+import { RegistroPontoComponent } from './registro-ponto/registro-ponto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColaboradoresComponent,
-    ColaboradorDetalhesComponent
+    ColaboradorDetalhesComponent,
+    RegistroPontoComponent
   ],
   imports: [
     BrowserModule,
