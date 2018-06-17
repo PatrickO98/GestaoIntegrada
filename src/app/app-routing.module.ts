@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ColaboradoresComponent }      from './colaboradores/colaboradores.component';
 import { ColaboradorDetalhesComponent } from './colaborador-detalhes/colaborador-detalhes.component';
-
+import { RegistroPontoComponent } from './registro-ponto/registro-ponto.component';
+ 
 const routes: Routes = [
   { path: 'colaboradores', component: ColaboradoresComponent },
-  { path: 'detalhes/:id', component: ColaboradorDetalhesComponent }
+  { path: 'detalhes/:id', component: ColaboradorDetalhesComponent },
+  { path: 'registro-ponto', component: RegistroPontoComponent }
 ];
 
 @NgModule({

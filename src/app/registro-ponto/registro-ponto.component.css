@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    box-shadow: 0 0 20px 0 #a9a9a9;
+    border-collapse: collapse;
+}
+
+thead tr th {
+    border: 1px solid black;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 33.333%;
+    padding: .3rem;
+}
+
+tbody tr td {
+    padding-left: .5rem;
+    border: 1px solid black;
+}
+
