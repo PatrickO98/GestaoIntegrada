@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Novo colaborador</h1>
+
+  <form action="">
+    <input type="text" placeholder="Nome">
+    <input type="text" placeholder="CPF">
+
+    <div class="half">
+      <input type="email" [(ngModel)]="colaborador.email" placeholder="E-mail">
+      <input type="tel" placeholder="Telefone">
+    </div>
+
+    <div class="half">
+      <input type="text" placeholder="Nº Carteira de Trabalho">
+      <input type="text" placeholder="PIS/PASEP">
+    </div>
+
+    <div class="half">
+      <input type="text" placeholder="Endereço" style="width: 70%;">
+      <input type="text" placeholder="Nº" style="width: 20%;">
+    </div>
+
+    <select name="cargo" id="">
+
+    </select>
+
+    <input type="submit" value="Salvar">
+  </form>
+
+  <button class="btn-mais" (click)="goBack()">Voltar</button>
+</div>

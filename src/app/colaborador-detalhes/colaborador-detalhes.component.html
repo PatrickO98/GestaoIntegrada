@@ -1,17 +1,16 @@
 <div class="container" *ngIf="colaborador">
-  <h1>{{ colaborador.name | uppercase }} - Editar</h1>
+  <h1>{{ colaborador.nome | uppercase }} - Editar</h1>
 
   <form action="">
-    <input type="text" [(ngModel)]="colaborador.name" placeholder="Nome">
+    <input type="text" [(ngModel)]="colaborador.nome" placeholder="Nome">
 
     <div class="half">
-      <input type="email" placeholder="E-mail">
+      <input type="email" [(ngModel)]="colaborador.email" placeholder="E-mail">
       <input type="tel" placeholder="Telefone">
     </div>
 
     <select name="cargo" id="">
-      <option value="1">Desenvolvedor Java PL</option>
-      <option value="2">Gerente de Projetos</option>
+      
     </select>
 
     <input type="submit" value="Salvar">

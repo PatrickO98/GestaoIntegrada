@@ -13,9 +13,9 @@
   <div class="list-users">
     <div class="user colaboradores" *ngFor="let colaborador of colaboradores">
       <h2>
-        <i class="fa fa-user"></i> {{ colaborador.name }}</h2>
+        <i class="fa fa-user"></i> {{ colaborador.nome }}</h2>
       <h3>
-        <b>Cargo:</b> {{ colaborador.cargo }}</h3>
+        <b>Cargo:</b> {{ colaborador.cargo.nome }}</h3>
       <a class="btn-mais" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
     </div>
   </div>

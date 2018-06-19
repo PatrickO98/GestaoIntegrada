@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ColaboradorDetalhesComponent } from './colaborador-detalhes/colaborador-detalhes.component';
 import { RegistroPontoComponent } from './registro-ponto/registro-ponto.component';
 import { MessagesComponent } from './messages/messages.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ColaboradorCadastroComponent } from './colaborador-cadastro/colaborador-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { MessagesComponent } from './messages/messages.component';
     ColaboradoresComponent,
     ColaboradorDetalhesComponent,
     RegistroPontoComponent,
-    MessagesComponent
+    MessagesComponent,
+    ColaboradorCadastroComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,7 +20,10 @@ export class ColaboradoresComponent implements OnInit {
       .subscribe(colaboradores => {
         this.colaboradores = colaboradores;
         this.todosColaboradores = colaboradores;
-      });
+      },
+    error => {
+      alert("Erro ao buscar colaboradores.");
+    });
   }
 
   ngOnInit() {
