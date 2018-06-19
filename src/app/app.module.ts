@@ -10,6 +10,7 @@ import { RegistroPontoComponent } from './registro-ponto/registro-ponto.componen
 import { MessagesComponent } from './messages/messages.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ColaboradorCadastroComponent } from './colaborador-cadastro/colaborador-cadastro.component';
+import { FolhasDePagamentoComponent } from './folhas-de-pagamento/folhas-de-pagamento.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ColaboradorCadastroComponent } from './colaborador-cadastro/colaborador
     ColaboradorDetalhesComponent,
     RegistroPontoComponent,
     MessagesComponent,
-    ColaboradorCadastroComponent
+    ColaboradorCadastroComponent,
+    FolhasDePagamentoComponent
   ],
   imports: [
     BrowserModule,
