@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "noUnsedLocals": false,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -15,6 +16,6 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
   }
 }

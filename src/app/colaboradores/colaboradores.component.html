@@ -5,9 +5,18 @@
       <label for="busca">
         <i class="fa fa-search"></i>
       </label>
-      <input type="text" class="search" placeholder="Buscar colaborador" name="busca" (keyup)="filtraFuncionarios($event, searchFuncionario.value)" #searchFuncionario>
+      <input type="text" class="search" placeholder="Buscar colaborador" name="busca" (keyup)="filtraFuncionarios($event, searchFuncionario.value)"
+        #searchFuncionario>
     </div>
-    <a class="btn-mais" routerLink="/cadastro">Cadastrar Colaborador <i class="fa fa-plus"></i></a>
+    <div class="botoes">
+      <a class="btn-mais" routerLink="/cadastro">Cadastrar Colaborador
+        <i class="fa fa-plus"></i>
+      </a>
+      <a class="btn-mais calculo" onclick="calcSal">
+        Calcular Salários
+        <i class="fas fa-calculator"></i>
+      </a>
+    </div>
   </div>
 
   <div class="list-users">
@@ -16,7 +25,17 @@
         <i class="fa fa-user"></i> {{ colaborador.nome }}</h2>
       <h3>
         <b>Cargo:</b> {{ colaborador.cargo.nome }}</h3>
+
+        <h3 class="salario" style="display: none;">
+          <b>Salário:</b> R$
+        </h3>
       <a class="btn-mais" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
     </div>
   </div>
 </div>
+
+<script>
+  function calcSal(){
+    element.getElementsByClassName("salario").style.display = "block";
+  }
+</script>

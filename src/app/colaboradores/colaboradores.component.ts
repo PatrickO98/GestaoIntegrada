@@ -22,7 +22,7 @@ export class ColaboradoresComponent implements OnInit {
         this.todosColaboradores = colaboradores;
       },
     error => {
-      alert("Erro ao buscar colaboradores.");
+      //alert("Erro ao buscar colaboradores.");
     });
   }
 
