@@ -55,6 +55,7 @@
     padding: 1rem;
     box-shadow: 0 0 14px 0 #808080;
     margin: 1rem;
+    transition: .5s;
 }
 
 .user h3 {

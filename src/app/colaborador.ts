@@ -4,7 +4,7 @@ import { Conta } from './conta';
 
 export class Colaborador {
     id: number;
-    name: string;
+    nome: string;
     endereco: Endereco;
     cargo: Cargo;
     conta: Conta;
@@ -14,4 +14,5 @@ export class Colaborador {
     genero: string;
     ctps_num: number;
     pis_pasep: number;
+    salarioAtual: number;
 }

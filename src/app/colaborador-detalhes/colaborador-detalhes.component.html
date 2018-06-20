@@ -1,17 +1,17 @@
 <div class="container" *ngIf="colaborador">
   <h1>{{ colaborador.nome | uppercase }} - Editar</h1>
 
-  <form action="">
-    <input type="text" placeholder="Nome">
-    <input type="text" placeholder="CPF">
+  <form>
+    <input type="text" [(ngModel)]="colaborador.nome" name="nome" placeholder="Nome">
+    <input type="text" placeholder="CPF" [(ngModel)]="colaborador.cpf" name="cpf">
 
     <div class="half">
-      <input type="email" [(ngModel)]="colaborador.email" placeholder="E-mail">
-      <input type="tel" placeholder="Telefone">
+      <input type="email" [(ngModel)]="colaborador.email" name="email" placeholder="E-mail">
+      <input type="tel" [(ngModel)]="colaborador.telefone[0].numero" name="telefone" placeholder="Telefone">
     </div>
 
     <div class="half">
-      <input type="text" placeholder="Nº Carteira de Trabalho">
+      <input type="text" [(ngModel)]="colaborador.ctpsNum" name="ctps" placeholder="Nº Carteira de Trabalho">
       <input type="text" placeholder="PIS/PASEP">
     </div>
 
@@ -21,7 +21,6 @@
     </div>
 
     <select name="cargo" id="">
-      
     </select>
 
     <input type="submit" value="Salvar">

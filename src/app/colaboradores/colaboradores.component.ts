@@ -31,7 +31,8 @@ export class ColaboradoresComponent implements OnInit {
   }
 
   filtraFuncionarios(event: KeyboardEvent, param: string): void {
-    this.colaboradores = this.todosColaboradores.filter(e => e.name.includes(param));
+    console.log(this.colaboradores);
+    this.colaboradores = this.todosColaboradores.filter(e => e.nome.includes(param));
   }
 
 }

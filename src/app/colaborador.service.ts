@@ -6,11 +6,11 @@ import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
-/*const httpOptions {
+const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json'
   })
-};*/
+};
 
 @Injectable({
   providedIn: 'root'
@@ -24,9 +24,9 @@ export class ColaboradorService {
     private http: HttpClient
   ) { }
 
-  private colaboradoresUrl = 'http://179.178.61.216:11111/GestaoRH/ColaboradorService?action=getAll';  // URL to web api
-  private colaboradorUrlGet = 'http://179.178.61.216:11111/GestaoRH/ColaboradorService?action=get';
-  private colaboradorUrlPut = 'http://179.178.61.216:11111/GestaoRH/ColaboradorService?action=put';
+  private colaboradoresUrl = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=getAll';  // URL to web api
+  private colaboradorUrlGet = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=get';
+  private colaboradorUrlPut = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=put';
 
   getColaboradores(): Observable<Colaborador[]> {
     return this.http.get<Colaborador[]>(this.colaboradoresUrl);
@@ -34,8 +34,8 @@ export class ColaboradorService {
 
   /** GET hero by id. Will 404 if id not found */
   getColaborador(id: number): Observable<Colaborador> {
-    const url = '${this.colaboradorUrlGet}&${id}';
-    return this.http.get<Colaborador>(url).pipe();
+    const url = `${this.colaboradorUrlGet}&id=${id}`;
+    return this.http.get<Colaborador>(url);
   }
 
   editarColaborador(colaborador: Colaborador): Observable<any> {

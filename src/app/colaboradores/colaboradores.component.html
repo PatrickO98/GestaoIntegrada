@@ -12,10 +12,10 @@
       <a class="btn-mais" routerLink="/cadastro">Cadastrar Colaborador
         <i class="fa fa-plus"></i>
       </a>
-      <a class="btn-mais calculo" onclick="calcSal">
+      <!--<button class="btn-mais calculo" onclick="calcSal">
         Calcular Salários
         <i class="fas fa-calculator"></i>
-      </a>
+      </button>-->
     </div>
   </div>
 
@@ -26,16 +26,10 @@
       <h3>
         <b>Cargo:</b> {{ colaborador.cargo.nome }}</h3>
 
-        <h3 class="salario" style="display: none;">
-          <b>Salário:</b> R$
+        <h3>
+          <b>Salário:</b> R$ {{ colaborador.salarioAtual }}
         </h3>
       <a class="btn-mais" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
     </div>
   </div>
 </div>
-
-<script>
-  function calcSal(){
-    element.getElementsByClassName("salario").style.display = "block";
-  }
-</script>
