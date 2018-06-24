@@ -26,6 +26,11 @@ export class ColaboradoresComponent implements OnInit {
     });
   }
 
+  delete(colaborador: Colaborador): void {
+    this.colaboradores = this.colaboradores.filter(c => c !== colaborador);
+    this.colaboradorService.deleteColaborador(colaborador.id).subscribe();
+  }
+
   ngOnInit() {
     this.getColaboradores();
   }

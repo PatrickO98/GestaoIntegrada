@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Colaborador } from '../colaborador';
+import { ColaboradorService } from '../colaborador.service';
 
 @Component({
   selector: 'app-colaborador-cadastro',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColaboradorCadastroComponent implements OnInit {
 
-  constructor() { }
+  todosColaboradores: Colaborador[];
+  colaboradores: Colaborador[];
+
+  constructor(private colaboradorService: ColaboradorService) { }
+
+  add(colaborador: Colaborador): void {
+    this.colaboradorService.addColaborador(colaborador)
+      .subscribe(colaborador => this.colaboradores.push(colaborador));
+  }
 
   ngOnInit() {
   }

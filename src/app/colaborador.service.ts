@@ -27,6 +27,8 @@ export class ColaboradorService {
   private colaboradoresUrl = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=getAll';  // URL to web api
   private colaboradorUrlGet = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=get';
   private colaboradorUrlPut = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=put';
+  private colaboradorUrlPost = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=post';
+  private colaboradorUrlDelete = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action=delete';
 
   getColaboradores(): Observable<Colaborador[]> {
     return this.http.get<Colaborador[]>(this.colaboradoresUrl);
@@ -39,6 +41,15 @@ export class ColaboradorService {
   }
 
   editarColaborador(colaborador: Colaborador): Observable<any> {
-    return this.http.put(this.colaboradorUrlPut, colaborador);
+    return this.http.put(this.colaboradorUrlPut, colaborador, httpOptions);
+  }
+
+  addColaborador(colaborador: Colaborador): Observable<Colaborador> {
+    return this.http.post<Colaborador>(this.colaboradorUrlPost, colaborador, httpOptions);
+  }
+
+  deleteColaborador(id: number): Observable<{}> {
+    const url = `${this.colaboradorUrlDelete}&id=${id}`;
+    return this.http.delete(url, httpOptions);
   }
 }

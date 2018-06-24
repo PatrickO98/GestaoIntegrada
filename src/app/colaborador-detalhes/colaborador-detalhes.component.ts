@@ -29,6 +29,11 @@ export class ColaboradorDetalhesComponent implements OnInit {
     .subscribe(colaborador => this.colaborador = colaborador);
   }
 
+  save(): void {
+    this.colaboradorService.editarColaborador(this.colaborador)
+      .subscribe(() => this.goBack());
+  }
+
   goBack(): void {
     this.location.back();
   }
