@@ -1,6 +1,6 @@
 FROM node:8.9.4 as builder
 
-COPY polygon-gestao /polygon-gestao
+COPY . /polygon-gestao
 
 WORKDIR /polygon-gestao
 
