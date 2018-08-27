@@ -2,9 +2,6 @@ services:
 
   front:
     container_name: gestao-front
-    build:
-      context: .
-      dockerfile: Dockerfile
-    
+    image: patricko98/polygonfront
     ports: 
       -4200:4200
