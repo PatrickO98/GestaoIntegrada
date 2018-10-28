@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Colaborador } from './colaborador';
-import { COLABORADORES } from './colaboradores';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -25,7 +24,7 @@ export class ColaboradorService {
   ) { }
 
   // URL to web api
-  private colaboradoresUrl = 'http://172.23.147.26:8081/GestaoRH/ColaboradorService?action';
+  private colaboradoresUrl = 'http://localhost:8080/GestaoRH/ColaboradorService?action';
 
   getColaboradores(): Observable<Colaborador[]> {
     return this.http.get<Colaborador[]>(this.colaboradoresUrl+'=getAll');

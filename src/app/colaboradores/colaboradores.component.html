@@ -26,9 +26,9 @@
       <h3>
         <b>Cargo:</b> {{ colaborador.cargo.nome }}</h3>
 
-        <h3>
-          <b>Salário:</b> R$ {{ colaborador.salarioAtual }}
-        </h3>
+        <h3>Salário: {{ colaborador.salarioAtual }}</h3>
+
+      <a (click)="calcularSalario(colaborador)" class="btn-mais">Calcular Salário</a>
       <a class="btn-mais" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
     </div>
   </div>

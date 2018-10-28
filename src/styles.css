@@ -132,10 +132,14 @@ form .half {
     justify-content: space-between;
 }
 
-form .half input {
+form .half label {
     width: 48%;
     margin-left: 0;
     margin-right: 0;
+}
+
+form .half input {
+    width: 100%;
 }
 
 form input[type="submit"], form button {
@@ -146,6 +150,8 @@ form input[type="submit"], form button {
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+    border: none;
+    padding: 8px;
 }
 
 form input[type="submit"]:hover {

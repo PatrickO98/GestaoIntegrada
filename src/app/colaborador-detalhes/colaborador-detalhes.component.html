@@ -2,25 +2,55 @@
   <h1>{{ colaborador.nome | uppercase }} - Editar</h1>
 
   <form>
+    <label for="nome">
+      Nome:
+    </label>
     <input type="text" [(ngModel)]="colaborador.nome" name="nome" placeholder="Nome">
+    <label for="cpf">
+      CPF:
+    </label>
     <input type="text" placeholder="CPF" [(ngModel)]="colaborador.cpf" name="cpf">
 
     <div class="half">
-      <input type="email" [(ngModel)]="colaborador.email" name="email" placeholder="E-mail">
-      <input type="tel" [(ngModel)]="colaborador.telefone[0].numero" name="telefone" placeholder="Telefone">
+      <label for="email">
+        E-mail:
+        <input type="email" [(ngModel)]="colaborador.email" name="email" placeholder="E-mail">
+      </label>
+      <label for="numero">
+        Telefone:
+        <input type="tel" [(ngModel)]="colaborador.telefone.numero" name="numero" placeholder="Telefone">
+      </label>
     </div>
 
     <div class="half">
-      <input type="text" [(ngModel)]="colaborador.ctpsNum" name="ctps" placeholder="Nº Carteira de Trabalho">
-      <input type="text" placeholder="PIS/PASEP">
+      <label for="ctpsNum">
+        Carteira de trabalho:
+        <input type="text" [(ngModel)]="colaborador.ctpsNum" name="ctpsNum" placeholder="Nº Carteira de Trabalho">
+      </label>
+      <label for="pisPasep">
+        Número PIS/PASEP:
+        <input type="text" [(ngModel)]="colaborador.pisPasep" name="pisPasep" placeholder="PIS/PASEP">
+      </label>
     </div>
 
     <div class="half">
-      <input type="text" placeholder="Endereço" style="width: 70%;">
-      <input type="text" placeholder="Nº" style="width: 20%;">
+      <label for="rua" style="width: 70%;">
+        Endereço:
+        <input type="text" [(ngModel)]="colaborador.endereco.rua" name="rua" placeholder="Endereço">
+      </label>
+      <label for="numeroE" style="width: 20%;">
+        Número:
+        <input type="text" [(ngModel)]="colaborador.endereco.numero" name="numeroE" placeholder="Nº">
+      </label>
     </div>
 
-    <select name="cargo" id="">
+    <select name="cargo" id="" ngModel> 
+      <option value="" disabled>
+        Selecione o cargo
+      </option>
+      <option *ngFor="let cargo of cargos" [ngValue]="cargo.nome">
+        {{cargo.nome}}
+      </option>
     </select>
 
     <button (click)="save();">

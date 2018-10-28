@@ -1,18 +1,20 @@
 import { Cargo } from './cargo';
 import { Endereco } from './endereco';
 import { Conta } from './conta';
+import { Telefone } from './telefone';
 
 export class Colaborador {
     id: number;
     nome: string;
-    endereco: Endereco;
-    cargo: Cargo;
-    conta: Conta;
     cpf: number;
     dtNascimento: Date;
-    email: string;
     genero: string;
-    ctps_num: number;
-    pis_pasep: number;
+    email: string;
+    ctpsNum: number;
+    pisPasep: number;
+    conta: Conta;
+    telefone: Telefone;
+    endereco: Endereco;
+    cargo: Cargo;
     salarioAtual: number;
 }
