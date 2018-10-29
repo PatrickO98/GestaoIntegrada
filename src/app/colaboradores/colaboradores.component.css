@@ -62,3 +62,19 @@
     font-weight: normal;
     height: 40px;
 }
+
+.user span.salario {
+    display: none;
+    padding: 6px;
+    margin-bottom: 1rem;
+    transition: .5s;
+    /*background-color: #105021;*/
+    color: #000;
+    font-weight: bold;
+}
+
+.user span.salario img.gif {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+}

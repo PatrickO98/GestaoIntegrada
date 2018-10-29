@@ -24,10 +24,10 @@ export class FolhaService {
   ) { }
 
   // URL to web api
-  private calculoFolhaUrl = 'http://localhost:8080/GestaoRH/CalculoFolhaService?action';
+  private calculoFolhaUrl = 'http://localhost:8080/GestaoRH/CalculoFolhaService';
 
-  calculoFolhaColaborador(id: number): Observable<{}> {
-    const url = `${this.calculoFolhaUrl}=calculaFolha&id=${id}`;
-    return this.http.post(url, httpOptions);
+  calculoFolhaColaborador(colaborador: Colaborador): Observable<{}> {
+    const url = `${this.calculoFolhaUrl}`;
+    return this.http.post<Colaborador>(url, colaborador, httpOptions);
   }
 }
