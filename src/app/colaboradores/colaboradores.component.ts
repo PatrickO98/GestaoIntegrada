@@ -45,17 +45,22 @@ export class ColaboradoresComponent implements OnInit {
 
   calcularSalario(colaborador: Colaborador): number {
     document.getElementById('salario-'+colaborador.id).style.display = "block";
+    //document.getElementById('modal-'+colaborador.id).style.display = "block";
     //const salario = null;
     this.folhaService.calculoFolhaColaborador(colaborador)
       .subscribe(
         data => {
-          data.Salario = parseFloat(data.Salario).toFixed(2);
-          document.getElementById('salario-'+colaborador.id).innerHTML =  "Salário Calculado: R$" + data.Salario.replace('.',',');
-          console.log(data.Salario);
+          data = parseFloat(data.SalarioBruto).toFixed(2);
+          document.getElementById('salario-'+colaborador.id).innerHTML =  "Salário Calculado: R$" + data.SalarioBruto.replace('.',',');
+          console.log(data.SalarioBruto);
         }
       );
     //console.log(salario);
     return null;  
+  }
+
+  fecharModal() {
+
   }
 
 }

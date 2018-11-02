@@ -32,6 +32,17 @@
 
       <a (click)="calcularSalario(colaborador)" class="btn-mais">Calcular Salário</a>
       <a class="btn-mais" routerLink="/detalhes/{{colaborador.id}}">Ver/Editar</a>
+
+      <div id="modal-{{colaborador.id}}" class="calculo-modal">
+        <div class="modal-body">
+            <h4>Cáculo Salário - {{colaborador.nome}}</h4>
+
+            <button (click)="fecharModal" class="close">&times;</button>
+
+            <table>
+            </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>

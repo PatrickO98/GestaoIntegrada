@@ -17,4 +17,6 @@ export class Colaborador {
     endereco: Endereco;
     cargo: Cargo;
     salarioAtual: number;
+    horasTrabalhadas: number;
+    numSerieRFID: string;
 }
