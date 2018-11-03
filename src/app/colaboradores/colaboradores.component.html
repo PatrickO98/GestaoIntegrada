@@ -37,10 +37,35 @@
         <div class="modal-body">
             <h4>Cáculo Salário - {{colaborador.nome}}</h4>
 
-            <button (click)="fecharModal" class="close">&times;</button>
+            <button (click)="fecharModal(colaborador.id)" class="close">&times;</button>
 
-            <table>
-            </table>
+            <ul class="desc-calculo">
+              <li>
+                <span>Salário Bruto:</span>
+
+                <p class="salario-bruto"></p>
+              </li>
+              <li>
+                <span>INSS:</span>
+
+                <p class="inss"></p>
+              </li>
+              <li>
+                <span>IRRF:</span>
+
+                <p class="irrf"></p>
+              </li>
+              <li>
+                <span>Adicional Periculosidade:</span>
+
+                <p class="adicional"></p>
+              </li>
+              <li>
+                <span>Salário Líquido:</span>
+                
+                <p class="salario-liq"></p>
+              </li>
+            </ul>
         </div>
       </div>
     </div>

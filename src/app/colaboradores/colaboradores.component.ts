@@ -44,23 +44,31 @@ export class ColaboradoresComponent implements OnInit {
   }
 
   calcularSalario(colaborador: Colaborador): number {
+    const modal = document.getElementById('modal-'+colaborador.id);
+
     document.getElementById('salario-'+colaborador.id).style.display = "block";
-    //document.getElementById('modal-'+colaborador.id).style.display = "block";
-    //const salario = null;
     this.folhaService.calculoFolhaColaborador(colaborador)
       .subscribe(
         data => {
-          data = parseFloat(data.SalarioBruto).toFixed(2);
+          data.SalarioBruto = parseFloat(data.SalarioBruto).toFixed(2);
+          data.Inss = parseFloat(data.Inss).toFixed(2);
+          data.Irrf = parseFloat(data.Irrf).toFixed(2);
+          data.AdicionalPericulosidade = parseFloat(data.AdicionalPericulosidade).toFixed(2);
+          data.SalarioLiquido = parseFloat(data.SalarioLiquido).toFixed(2);
           document.getElementById('salario-'+colaborador.id).innerHTML =  "Salário Calculado: R$" + data.SalarioBruto.replace('.',',');
-          console.log(data.SalarioBruto);
+          modal.style.display = "block";
+          modal.querySelector('.salario-bruto').innerHTML = data.SalarioBruto.replace('.',',');
+          modal.querySelector('.inss').innerHTML = data.Inss.replace('.',',');
+          modal.querySelector('.irrf').innerHTML = data.Irrf.replace('.',',');
+          modal.querySelector('.adicional').innerHTML = data.AdicionalPericulosidade.replace('.',',');
+          modal.querySelector('.salario-liq').innerHTML = data.SalarioLiquido.replace('.',',');
         }
       );
-    //console.log(salario);
     return null;  
   }
 
-  fecharModal() {
-
+  fecharModal(id: number) {
+    document.getElementById('modal-'+id).style.display = "none";
   }
 
 }

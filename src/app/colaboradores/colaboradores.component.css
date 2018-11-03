@@ -114,3 +114,26 @@
     margin-top: 1rem;
     text-align: center;
 }
+
+.user .calculo-modal .modal-body ul.desc-calculo {
+    width: 100%;
+    padding-left: 0;
+    list-style: none;
+}
+
+.user .calculo-modal .modal-body ul.desc-calculo li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    margin-bottom: .5rem;
+}
+
+.user .calculo-modal .modal-body ul.desc-calculo li p {
+    margin: 0;
+}
+
+.user .calculo-modal .modal-body ul.desc-calculo li:last-child {
+    font-weight: bold;
+}
