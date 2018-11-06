@@ -23,6 +23,7 @@ export class ColaboradoresComponent implements OnInit {
       .subscribe(colaboradores => {
         this.colaboradores = colaboradores;
         this.todosColaboradores = colaboradores;
+        document.getElementById('load').style.display = "none";
       },
     error => {
       //alert("Erro ao buscar colaboradores.");

@@ -26,7 +26,7 @@ export class FolhaService {
   // URL to web api
   private calculoFolhaUrl = 'http://localhost:8080/GestaoRH/CalculoFolhaService';
 
-  calculoFolhaColaborador(colaborador: Colaborador): Observable<{}> {
+  calculoFolhaColaborador(colaborador: Colaborador): Observable<any> {
     const url = `${this.calculoFolhaUrl}`;
     return this.http.post<Colaborador>(url, colaborador, httpOptions);
   }
